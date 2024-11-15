@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Face Recognition System</h1>
+    <h2>Live Video Feed</h2>
+    <img src="{{ url_for('video_feed') }}" alt="Video Feed" width="640" height="480">
+
+    <h2>Register a New Face</h2>
+    <form action="/register_face" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="file">Choose an Image:</label>
+        <input type="file" id="file" name="file" required><br><br>
+        <input type="submit" value="Register Face">
+    </form>
+</body>
+</html>
